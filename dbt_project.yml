@@ -48,6 +48,6 @@ vars:
 
 seeds:
   de_zoomcamp:
-    taxi_zone_lookup:
+    taxi_zone_lookups:
       +column_types:
         locationid: numeric
