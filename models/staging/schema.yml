@@ -8,9 +8,21 @@ sources:
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
+      - name: fhv_tripdata
 
 
 models:
+    - name: stg_fhv_tripdata
+      description: >
+        Trips made by fhv in 2019
+      # columns:
+      #     - name: tripid
+      #       description: Primary key for this table, generated with a concatenation of vendorid+pickup_datetime
+      #       tests:
+      #           - unique:
+      #               severity: warn
+      #           - not_null:
+      #               severity: warn
     - name: stg_green_tripdata
       description: >
         Trip made by green taxis, also known as boro taxis and street-hail liveries.
