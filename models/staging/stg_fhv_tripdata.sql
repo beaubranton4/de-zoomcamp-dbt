@@ -3,6 +3,7 @@
 select 
     dispatching_base_num,
     pickup_datetime,
+    DATE_TRUNC(EXTRACT(DATE FROM pickup_datetime), MONTH)  as pickup_month,
     dropoff_datetime,
     pulocationid,
     dolocationid, 
