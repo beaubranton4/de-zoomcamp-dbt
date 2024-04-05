@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: stg
+    database: peppy-citron-411704
+    schema: prod
+
+    tables:
+      - name: ncaa_box_test_00
+
+models:
+    - name: stg_all_batting_box_scores
+      description: >
+        All batting box scores scraped on a daily basis for all Division 1 Baseball Games in the 2024 Season.
+        Each row contains a hitter's stats for a given game.
+      
