@@ -1,6 +1,6 @@
 with daily_batting_stats as(
     select *
-    from {{ ref('stg_all_batting_box_scores') }}
+    from {{ ref('stg_2024_all_batting_box_scores') }}
 )
 
 , date_spine as (

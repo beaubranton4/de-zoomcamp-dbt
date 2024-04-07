@@ -7,4 +7,4 @@ from(
    )
 }}
 ) 
-where DATE_TRUNC(date_day, DAY) <= (select max(date) from {{ ref('stg_all_batting_box_scores') }})
+where DATE_TRUNC(date_day, DAY) <= (select greatest('2024-02-16',least('2024-06-24',max(date))) from {{ ref('stg_2024_all_batting_box_scores') }})
