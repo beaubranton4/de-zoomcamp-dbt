@@ -4,7 +4,7 @@ with daily_batting_stats as(
 )
 
 , date_spine as (
-select * from {{ ref('2024_season_date_spine') }}
+select * from {{ ref('dim_2024_season_date_spine') }}
 )
 
 , cumulative_stats as(

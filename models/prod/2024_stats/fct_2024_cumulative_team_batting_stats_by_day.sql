@@ -4,7 +4,7 @@ with daily_batting_stats as(
 )
 
 , date_spine as (
-select * from {{ ref('2024_season_date_spine') }}
+select * from {{ ref('dim_2024_season_date_spine') }}
 )
 
 , cumulative_stats as(
@@ -44,7 +44,7 @@ select * from {{ ref('2024_season_date_spine') }}
     select 
         *, 
         case 
-            when rank() over (partition by player, team order by date desc) = 1 then true
+            when rank() over (partition by team order by date desc) = 1 then true
             else false
         end as current_stats
     from cumulative_stats
